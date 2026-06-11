@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | LogiTrans</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body class="dashboard-page">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-mark">LT</span>
+        <div>
+          <strong>LogiTrans</strong>
+          <span>Panel administrativo</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav" aria-label="Menu principal">
+        <button class="nav-link active" data-view="dashboard" type="button">Dashboard</button>
+        <button class="nav-link" data-view="conductores" type="button">Conductores</button>
+        <button class="nav-link" data-view="vehiculos" type="button">Vehiculos</button>
+        <button class="nav-link" data-view="rutas" type="button">Rutas</button>
+        <button class="nav-link" data-view="programaciones" type="button">Programaciones</button>
+        <button class="nav-link" data-view="viajes" type="button">Viajes y seguimiento</button>
+      </nav>
+      <button id="logout-button" class="ghost-button logout-button" type="button">Cerrar sesion</button>
+    </aside>
+
+    <div class="content-shell">
+      <header class="topbar">
+        <button id="sidebar-toggle" class="icon-button" type="button" aria-label="Abrir menu">☰</button>
+        <div>
+          <p class="eyebrow">Operacion en linea</p>
+          <h1 id="page-title">Dashboard</h1>
+        </div>
+        <div class="user-chip">
+          <span id="user-initials">LT</span>
+          <div>
+            <strong id="user-name">Usuario</strong>
+            <small id="user-role">Rol</small>
+          </div>
+        </div>
+      </header>
+
+      <main id="app-content" class="app-content" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <div id="modal-root" class="modal-root hidden" aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <header class="modal-header">
+        <div>
+          <p id="modal-kicker" class="eyebrow">Formulario</p>
+          <h2 id="modal-title">Modal</h2>
+        </div>
+        <button class="icon-button" data-modal-close type="button" aria-label="Cerrar">×</button>
+      </header>
+      <div id="modal-body" class="modal-body"></div>
+    </section>
+  </div>
+
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+  <div id="loading-overlay" class="loading-overlay hidden" aria-hidden="true">
+    <div class="loader"></div>
+  </div>
+  <script type="module" src="./assets/js/dashboard.js"></script>
+</body>
+</html>
