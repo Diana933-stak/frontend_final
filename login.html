@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | LogiTrans</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-hero" aria-label="Resumen LogiTrans">
+      <div class="brand-block">
+        <span class="brand-mark">LT</span>
+        <div>
+          <p class="eyebrow">Sistema Logistico</p>
+          <h1>Control de rutas y transporte de carga</h1>
+        </div>
+      </div>
+      <p class="hero-copy">Gestiona conductores, vehiculos, rutas, programaciones y seguimiento operativo desde un solo panel.</p>
+      <div class="hero-grid">
+        <article>
+          <strong>5</strong>
+          <span>Microservicios</span>
+        </article>
+        <article>
+          <strong>24/7</strong>
+          <span>Seguimiento</span>
+        </article>
+        <article>
+          <strong>API</strong>
+          <span>Token seguro</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="auth-card" aria-labelledby="login-title">
+      <div class="mobile-brand">
+        <span class="brand-mark">LT</span>
+        <span>LogiTrans</span>
+      </div>
+      <p class="eyebrow">Acceso administrativo</p>
+      <h2 id="login-title">Iniciar sesion</h2>
+      <p class="muted">Ingresa con usuario o correo registrado.</p>
+
+      <form id="login-form" class="stack-form" novalidate>
+        <label>
+          <span>Usuario o correo</span>
+          <input id="login-identifier" name="identificador" type="text" autocomplete="username" required>
+        </label>
+        <label>
+          <span>Contrasena</span>
+          <input id="login-password" name="contrasena" type="password" autocomplete="current-password" required>
+        </label>
+        <button class="primary-button full-button" type="submit">Entrar al sistema</button>
+      </form>
+      <p id="login-message" class="form-message" role="alert"></p>
+    </section>
+  </main>
+
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+  <div id="loading-overlay" class="loading-overlay hidden" aria-hidden="true">
+    <div class="loader"></div>
+  </div>
+  <script type="module" src="./assets/js/login.js"></script>
+</body>
+</html>
